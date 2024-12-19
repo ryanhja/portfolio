@@ -1,7 +1,7 @@
 .navbar {
-  width: 80%;
+  width: 88%;
   margin: auto;
-  padding: 15px 0;
+  padding: 50px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,5 +12,18 @@
 }
 
 .navbar ul {
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
 }
