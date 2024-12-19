@@ -1,1 +1,16 @@
+.navbar {
+  width: 80%;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.navbar .logo {
+  width: 110px;
+}
+
+.navbar ul {
+    
+}
