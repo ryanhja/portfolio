@@ -1,9 +1,23 @@
 .accueil {
   width: 88%;
-  margin: auto;
+  position: absolute;
+  top: 10%;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  margin-left: 6.6%;
 }
 
 .hello {
   color: #ff5757;
-  
+}
+
+.name {
+  color: #fff;
+}
+
+.poste {
+  color: #fff;
 }
