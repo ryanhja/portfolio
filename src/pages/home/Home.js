@@ -1,9 +1,9 @@
 import React from "react";
-import "./Accueil.css";
+import "./Home.css";
 
-const Accueil = () => {
+const Home = () => {
   return (
-    <div className="accueil">
+    <div className="home">
       <div className="left">
         <h1 className="hello">Bonjour !</h1>
         <h1 className="name">
@@ -16,4 +16,4 @@ const Accueil = () => {
   );
 };
 
-export default Accueil;
+export default Home;
