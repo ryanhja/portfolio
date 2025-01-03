@@ -1,5 +1,5 @@
 .navbar {
-  width: 88%;
+  width: 92%;
   margin: auto;
   padding: 20px 0;
   display: flex;
@@ -8,26 +8,26 @@
 }
 
 .navbar .logo {
-  width: 110px;
+  width: 150px;
   cursor: pointer;
   padding: 10px;
 }
 
-.navbar ul li {
-  list-style: none;
-  padding: 0 15px;
-  display: inline-block;
-}
-
-.navbar ul li a {
-  padding: 15px;
+.navbar .nav .list-menu {
   text-decoration: none;
+  padding: 15px;
   font-size: 20px;
   color: #fff;
 }
 
-.navbar ul li a:hover {
-  padding: 15px;
+.navbar .nav .list-menu:hover {
   background-color: #fff;
   color: #ff5757;
+}
+
+.navbar .nav p {
+  text-decoration: none;
+  padding: 15px 50px;
+  font-size: 20px;
+  color: #fff;
 }
