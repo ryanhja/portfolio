@@ -1,5 +1,5 @@
 import React from "react";
-import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from "./pages/navbar/Navbar";
@@ -42,6 +42,6 @@ const router = createBrowserRouter([
 
 const App = () => {
   return <RouterProvider router={router} />;
-}; 
+};
 
 export default App;

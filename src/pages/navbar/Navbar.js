@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 import logo from "./../../Logo.png";
-import icon from "../../noir.png";
+import icon from "../../blanc.png";
 import { NavLink, Outlet } from "react-router-dom";
 
 const NavBar = () => {
+  const [theme, setTheme] = useState("light");
+
+  const handleTheme = () => {
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+      setTheme("dark");
+    } else {
+      document.documentElement.setAttribute("data-bs-theme", "light");
+      setTheme("light");
+    }
+  };
+
   return (
     <>
       <div className="navbar">
@@ -25,7 +37,9 @@ const NavBar = () => {
           <NavLink to="/contact" className="list-menu">
             Contact Me
           </NavLink>
-          <p>Nigth/Light</p>
+          <button className="rounded p-1" onClick={handleTheme}>
+            {theme === "light" ? "Dark" : "Light"}
+          </button>
         </div>
       </div>
       <div className="content">
