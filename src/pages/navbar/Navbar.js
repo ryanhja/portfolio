@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
-import logo from "./../../Logo.png";
-import icon from "../../blanc.png";
+import noire from "./../../noir.png";
+import blanc from "../../blanc.png";
 import { NavLink, Outlet } from "react-router-dom";
 
 const NavBar = () => {
@@ -20,7 +20,12 @@ const NavBar = () => {
   return (
     <>
       <div className="navbar">
-        <img src={icon} className="logo" alt="logo" />
+        {theme === "light" ? (
+          <img src={blanc} className="logo" alt="logo" />
+        ) : (
+          <img src={noire} className="logo" alt="logo" />
+        )}
+
         <div className="nav">
           <NavLink to="/" className="list-menu">
             Home
