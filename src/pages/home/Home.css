@@ -3,7 +3,7 @@
     border-right-color: transparent;
   }
 }
-
+/* 
 @keyframes cursorWrite {
   0%,
   10% {
@@ -17,35 +17,47 @@
   100% {
     width: 0;
   }
-}
+} */
 
 .home {
-  width: 88%;
-  position: absolute;
-  top: 40%;
+  width: 100%;
 }
 
 .left {
-  width: 50%;
+  position: absolute;
+  top: 15%;
   float: left;
-  margin-left: 6.6%;
 }
 
 .hello {
-  color: #ff5757;
+  color: #ffbd39;
+  font-size: 1.5em;
+}
+.name {
+  font-size: 3em;
+  font-weight: 800;
+  padding: 20px 0 5px 0;
 }
 
-.name {
-  color: #fff;
+.my-name {
+  color: #ffbd39;
 }
 
 .poste {
   display: inline-block;
-  color: hsl(207, 100%, 50%);
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.2em solid #1179f7;
+  border-right: 0.2em solid #fff;
+  padding-right: 0.1em;
   animation: cursorWrite 8s steps(11) infinite,
-    blindCursor 0.5s step-end infinite alternate;
-  margin-top: 1.1em;
+    blindCursor 1s step-end infinite alternate;
+}
+.right {
+  float: right;
+  top: 0;
+  margin-left: 50px;
+}
+
+.avatar {
+  width: 800px;
 }
