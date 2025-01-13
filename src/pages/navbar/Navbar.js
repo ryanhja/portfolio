@@ -9,11 +9,14 @@ const NavBar = () => {
   const [theme, setTheme] = useState("dark");
 
   const handleTheme = () => {
+    const element = document.querySelector(".theme");
     if (theme === "light") {
       document.documentElement.setAttribute("data-bs-theme", "dark");
+      element.classList.replace("theme_light", "theme_dark");
       setTheme("dark");
     } else {
       document.documentElement.setAttribute("data-bs-theme", "light");
+      element.classList.replace("theme_dark", "theme_light");
       setTheme("light");
     }
   };

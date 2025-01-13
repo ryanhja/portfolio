@@ -3,47 +3,52 @@
     border-right-color: transparent;
   }
 }
-/* 
-@keyframes cursorWrite {
-  0%,
-  10% {
-    width: 0;
-  }
-  45%,
-  55% {
-    width: 70%;
-  }
-  90%,
-  100% {
-    width: 0;
-  }
-} */
 
-.home {
+@keyframes poste {
+  0% {
+    content: "Engeenier BigData";
+  }
+  50% {
+    content: "Developper Python";
+  }
+  100% {
+    content: "Engeenier BigData";
+  }
+}
+
+.container_home {
+  height: calc(100vh - 106px);
+}
+.container_first_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   width: 100%;
 }
 
-.left {
-  position: absolute;
-  top: 15%;
-  float: left;
-}
-
-.hello {
-  color: #ffbd39;
-  font-size: 1.5em;
-}
-.name {
-  font-size: 3em;
-  font-weight: 800;
-  padding: 20px 0 5px 0;
-}
-
-.my-name {
+.container_hello {
+  width: 100%;
+  text-align: start;
+  font-size: 1rem;
   color: #ffbd39;
 }
 
-.poste {
+.container_bio {
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.container_name {
+  color: #ffbd39;
+}
+
+.container_poste {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -52,12 +57,22 @@
   animation: cursorWrite 8s steps(11) infinite,
     blindCursor 1s step-end infinite alternate;
 }
-.right {
-  float: right;
-  top: 0;
-  margin-left: 50px;
-}
 
+/* .poste::before {
+  content: "Engeenier BigData";
+  animation: poste 4s infinite 4s;
+} */
+
+.poste {
+  /* color: ; */
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 48px;
+  display: inline-block;
+  padding: 0;
+  border-right: 1px solid #414141;
+}
 .avatar {
-  width: 800px;
+  width: 720px;
+  object-fit: cover;
 }
