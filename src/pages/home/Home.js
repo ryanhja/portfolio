@@ -18,7 +18,7 @@ const Home = () => {
             </span>
           </div>
           <h1>
-            And I'm a <Typewriter text="Engineer BigData" delay={100} />
+            <Typewriter />
           </h1>
           <div className="container_poste"></div>
           <div className="container_social_media">

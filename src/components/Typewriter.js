@@ -1,39 +1,38 @@
 import React, { useEffect, useState } from "react";
 
-const Typewriter = ({ text, delay }) => {
-  const textList = ["Enginner BigData FullStact", "Developper Python"];
+const Typewriter = () => {
+  const textList = ["Engineer BigData Fullstack", "Developper Python"];
   const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [stringIndex, setStringIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     const typeJs = () => {
-      const currentString = textList[currentIndex];
+      const currentString = textList[stringIndex];
+
       if (isTyping) {
         if (charIndex < currentString.length) {
-          setCurrentText(
-            (prevText) => prevText + currentString.charAt[charIndex]
-          );
-          setCharIndex((prevIndex) => prevIndex + 1);
-
-          return () => clearTimeout(timeout);
+          setCurrentText((prev) => prev + currentString.charAt(charIndex));
+          setCharIndex((prev) => prev + 1);
         } else {
           setIsTyping(false);
         }
       } else {
         if (charIndex > 0) {
           setCurrentText(currentString.substring(0, charIndex - 1));
-          setCharIndex((prevIndex) => prevIndex - 1);
+          setCharIndex((prev) => prev - 1);
         } else {
           setIsTyping(true);
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % textList.length);
+          setStringIndex((prev) => (prev + 1) % textList.length);
         }
       }
     };
 
-    const intervalId = setInterval(typeJs, 100);
-  }, [charIndex, currentIndex, text, delay]);
+    const intervalId = setInterval(typeJs, 200);
+
+    return () => clearInterval(intervalId);
+  }, [charIndex, isTyping, stringIndex, textList]);
 
   return <span>{currentText}</span>;
 };
