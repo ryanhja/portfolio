@@ -48,7 +48,7 @@
   color: #ffbd39;
 }
 
-.container_poste {
+/* .container_poste {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -58,20 +58,15 @@
     blindCursor 1s step-end infinite alternate;
 }
 
-/* .poste::before {
-  content: "Engeenier BigData";
-  animation: poste 4s infinite 4s;
-} */
-
 .poste {
-  /* color: ; */
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 48px;
   display: inline-block;
   padding: 0;
   border-right: 1px solid #414141;
-}
+} */
+
 .avatar {
   width: 720px;
   object-fit: cover;
