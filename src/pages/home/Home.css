@@ -4,18 +4,6 @@
   }
 }
 
-@keyframes poste {
-  0% {
-    content: "Engeenier BigData";
-  }
-  50% {
-    content: "Developper Python";
-  }
-  100% {
-    content: "Engeenier BigData";
-  }
-}
-
 .container_home {
   height: calc(100vh - 106px);
 }
@@ -44,28 +32,16 @@
   text-align: left;
 }
 
-.container_name {
+.poste {
   color: #ffbd39;
 }
 
-/* .container_poste {
-  display: inline-block;
-  white-space: nowrap;
+.container_poste {
   overflow: hidden;
-  border-right: 0.2em solid #fff;
-  padding-right: 0.1em;
-  animation: cursorWrite 8s steps(11) infinite,
+  border-right: 0.3em solid #ffbd39;
+  animation: cursorWrite 4s steps(11) infinite,
     blindCursor 1s step-end infinite alternate;
 }
-
-.poste {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 48px;
-  display: inline-block;
-  padding: 0;
-  border-right: 1px solid #414141;
-} */
 
 .avatar {
   width: 720px;

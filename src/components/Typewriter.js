@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+const textList = ["Engineer BigData", "Data Engineer", "Developper Python"];
+
 const Typewriter = () => {
-  const textList = ["Engineer BigData Fullstack", "Developper Python"];
   const [currentText, setCurrentText] = useState("");
   const [stringIndex, setStringIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -29,10 +30,10 @@ const Typewriter = () => {
       }
     };
 
-    const intervalId = setInterval(typeJs, 200);
+    const intervalId = setInterval(typeJs, 120);
 
     return () => clearInterval(intervalId);
-  }, [charIndex, isTyping, stringIndex, textList]);
+  }, [charIndex, isTyping, stringIndex]);
 
   return <span>{currentText}</span>;
 };
