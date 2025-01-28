@@ -23,22 +23,30 @@
 .container_hello {
   width: 100%;
   text-align: start;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 2rem;
   color: #ffbd39;
 }
 
 .container_bio {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: left;
+  font-weight: 800;
+  padding: 17px 0;
+}
+
+.container_name {
+  color: #ffbd39;
 }
 
 .poste {
-  color: #ffbd39;
+  color: #1179f7;
 }
 
 .container_poste {
   overflow: hidden;
   border-right: 0.3em solid #ffbd39;
+  font-weight: 400;
   animation: cursorWrite 4s steps(11) infinite,
     blindCursor 1s step-end infinite alternate;
 }

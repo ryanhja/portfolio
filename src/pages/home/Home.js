@@ -8,17 +8,18 @@ const Home = () => {
       <div className="container_first_content">
         <div className="container_text">
           <div className="container_hello">
-            <span className="hello">Hello, It's Me</span>
+            <span className="hello">Hello</span>
           </div>
           <div className="container_bio">
+            I'm{" "}
             <span className="container_name">
-              Miaritiana Rayan Stive <br />
+              Rayan Stive <br />
               HAJANANTENAINA
             </span>
           </div>
           <div className="container_poste">
             <h1>
-              And I'm a{" "}
+              A{" "}
               <span className="poste">
                 <Typewriter />
               </span>
