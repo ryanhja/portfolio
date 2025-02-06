@@ -3,7 +3,7 @@ import "./NavBar.css";
 import noire from "./../../noir.png";
 import blanc from "../../blanc.png";
 import { NavLink, Outlet } from "react-router-dom";
-import "bootstrap-icons/font/bootstrap-icons.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("dark");
