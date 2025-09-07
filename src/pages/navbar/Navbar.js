@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./NavBar.css";
 import noire from "./../../noir.png";
 import blanc from "../../blanc.png";
 import { NavLink, Outlet } from "react-router-dom";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import Home from "../home/Home";
+import Education from "../education/Education";
+import Experience from "../experience/Experience";
+import Project from "../project/Project";
+import Contact from "../contact/Contact";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("dark");
@@ -22,7 +27,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="container">
+    <div className="app-main">
       <div className="header">
         {theme === "light" ? (
           <div className="navbar navbar-light">
@@ -78,7 +83,7 @@ const NavBar = () => {
               <NavLink to="/" className="list-menu">
                 Home
               </NavLink>
-              <NavLink to="/education" className="list-menu">
+              <NavLink to="#education-page" className="list-menu">
                 Education
               </NavLink>
               <NavLink to="/experience" className="list-menu">
@@ -95,8 +100,10 @@ const NavBar = () => {
           </div>
         )}
       </div>
-      <div className="content">
-        <Outlet />
+      <div className="body">
+        <Home className="home-page" />
+        <Experience className="experience-page" />
+        <Education className="education-page" />
       </div>
     </div>
   );

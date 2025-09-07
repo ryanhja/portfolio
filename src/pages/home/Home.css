@@ -4,15 +4,20 @@
   }
 }
 
-.container_home {
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  margin-top: 10%;
   height: calc(100vh - 106px);
 }
-.container_first_content {
+.top-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-.container_text {
+.left-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,15 +33,11 @@
   color: #ffbd39;
 }
 
-.container_bio {
+.introduction {
   font-size: 3rem;
   text-align: left;
   font-weight: 800;
   padding: 17px 0;
-}
-
-.container_name {
-  color: #ffbd39;
 }
 
 .poste {
@@ -45,13 +46,22 @@
 
 .container_poste {
   overflow: hidden;
-  border-right: 0.3em solid #ffbd39;
+  border-right: 0.3em solid #1179f7;
   font-weight: 400;
   animation: cursorWrite 4s steps(11) infinite,
     blindCursor 1s step-end infinite alternate;
 }
 
+.right-content {
+  margin: 10px;
+  width: 35%;
+}
+
+.resume-profile {
+  margin: 5px 0;
+  font-size: 1.3rem;
+}
+
 .avatar {
-  width: 720px;
   object-fit: cover;
 }
