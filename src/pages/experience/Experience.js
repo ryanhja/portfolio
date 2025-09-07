@@ -31,6 +31,10 @@ const Experience = () => {
             architecture, including the use of DBT for data transformation and
             data quality testing, performance optimization of ETL pipelines with
             DuckDB, and job orchestration using Apache Airflow.
+            <br />
+            Skills : Python, DBT, Apache Spark, DuckDB, PostgreSQL, SQL Server,
+            SQL Server Intégration Service (SSIS), Talend Open Studio, Apache
+            NiFi, Docker, Kubernetes, Apache Airflow, Metabase, PowerBI
           </p>
         </div>
         <div className="mt-4 p-5 bg-secondary text-white rounded">
@@ -42,6 +46,8 @@ const Experience = () => {
             internal Odoo platform.
             <br />• Participated in multiple client projects, providing
             technical support and implementing tailored business solutions.
+            <br />
+            Skills : Python, Odoo 8, Odoo 12, Odoo 16, PostgreSQL
           </p>
         </div>
         <div className="mt-4 p-5 bg-secondary text-white rounded">
@@ -57,6 +63,9 @@ const Experience = () => {
             extract domain-specific fields from textual data.
             <br />• Deployed the application on an Ubuntu server using a GitLab
             CI/CD pipeline.
+            <br />
+            Skills : Python, Flask,Tesseract OCR, spaCy, React, Bootstrap,
+            PostgreSQL
           </p>
         </div>
 
