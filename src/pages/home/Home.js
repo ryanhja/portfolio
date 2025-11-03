@@ -43,19 +43,6 @@ const Home = () => {
           />
         </div>
       </div>
-      {/* <div className="bottom-content">
-        <div className="container_social_media">
-          <a href="#">
-            <i className="bi bi-github"></i>
-          </a>
-          <a href="#">
-            <i className="bi bi-linkedin"></i>
-          </a>
-          <a href="#">
-            <i className="bi bi-facebook"></i>
-          </a>
-        </div>
-      </div> */}
     </div>
   );
 };

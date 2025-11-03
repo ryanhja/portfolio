@@ -3,12 +3,12 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./NavBar.css";
 import noire from "./../../noir.png";
 import blanc from "../../blanc.png";
-import { NavLink, Outlet } from "react-router-dom";
 import Home from "../home/Home";
 import Education from "../education/Education";
 import Experience from "../experience/Experience";
 import Project from "../project/Project";
 import Contact from "../contact/Contact";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("dark");
@@ -29,81 +29,88 @@ const NavBar = () => {
   return (
     <div className="app-main">
       <div className="header">
-        {theme === "light" ? (
-          <div className="navbar navbar-light">
-            <img src={blanc} className="logo" alt="logo" />
-            <div className="nav">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? "list-menu active" : "list-menu"
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/education"
-                className={({ isActive }) =>
-                  isActive ? "list-menu active" : "list-menu"
-                }
-              >
-                Education
-              </NavLink>
-              <NavLink
-                to="/experience"
-                className={({ isActive }) =>
-                  isActive ? "list-menu active" : "list-menu"
-                }
-              >
-                Experience
-              </NavLink>
-              <NavLink
-                to="/project"
-                className={({ isActive }) =>
-                  isActive ? "list-menu active" : "list-menu"
-                }
-              >
-                Projects
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? "list-menu active" : "list-menu"
-                }
-              >
-                Contact Me
-              </NavLink>
-              <i className="bi bi-moon-fill" onClick={handleTheme}></i>
-            </div>
+        <div
+          className={`fixed navbar ${
+            theme === "light" ? "navbar-light" : "navbar-dark"
+          }`}
+        >
+          <img
+            src={theme === "light" ? blanc : noire}
+            className="logo"
+            alt="logo"
+          />
+          <div className="nav">
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="list-menu"
+            >
+              Home
+            </Link>
+            <Link
+              to="education"
+              spy
+              smooth
+              duration={500}
+              offset={-70}
+              className="list-menu"
+            >
+              Education
+            </Link>
+            <Link
+              to="experience"
+              spy
+              smooth
+              duration={500}
+              offset={-70}
+              className="list-menu"
+            >
+              Experience
+            </Link>
+            <Link
+              to="project"
+              spy
+              smooth
+              duration={500}
+              offset={-70}
+              className="list-menu"
+            >
+              Projects
+            </Link>
+            <Link
+              to="contact"
+              spy
+              smooth
+              duration={500}
+              offset={-70}
+              className="list-menu"
+            >
+              Contact Me
+            </Link>
+            <i className="bi bi-sun-fill" onClick={handleTheme}></i>
           </div>
-        ) : (
-          <div className="navbar navbar-dark">
-            <img src={noire} className="logo" alt="logo" />
-            <div className="nav">
-              <NavLink to="/" className="list-menu">
-                Home
-              </NavLink>
-              <NavLink to="#education-page" className="list-menu">
-                Education
-              </NavLink>
-              <NavLink to="/experience" className="list-menu">
-                Experience
-              </NavLink>
-              <NavLink to="/project" className="list-menu">
-                Projects
-              </NavLink>
-              <NavLink to="/contact" className="list-menu">
-                Contact Me
-              </NavLink>
-              <i className="bi bi-sun-fill" onClick={handleTheme}></i>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
       <div className="body">
-        <Home className="home-page" />
-        <Experience className="experience-page" />
-        <Education className="education-page" />
+        <section id="home" className="home-page">
+          <Home />
+        </section>
+        <section id="experience" className="experience-page">
+          <Experience />
+        </section>
+        <section id="education" className="education-page">
+          <Education />
+        </section>
+        <section id="projet" className="projet-page">
+          <Project />
+        </section>
+        <section id="contact" className="contact-page">
+          <Contact />
+        </section>
       </div>
     </div>
   );
