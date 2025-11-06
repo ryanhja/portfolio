@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const textList = ["Miaritian Rayan Stive HAJANANTENAINA"];
+const textList = ["Big Data Fullstack Engineer", "Data Engineer/Analyst"];
 
 const Typewriter = () => {
   const [currentText, setCurrentText] = useState("");

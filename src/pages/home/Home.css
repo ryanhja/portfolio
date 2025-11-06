@@ -8,48 +8,25 @@
   margin: 0;
   padding: 0;
 }
-.main {
-  margin-top: 10%;
-  height: calc(100vh - 106px);
-}
-.top-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.left-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-}
-
-.container_hello {
-  width: 100%;
-  text-align: start;
-  font-weight: 400;
-  font-size: 2rem;
-  color: #ffbd39;
-}
-
-.introduction {
-  font-size: 3rem;
-  text-align: left;
-  font-weight: 800;
-  padding: 17px 0;
-}
 
 .poste {
-  color: #1179f7;
+  width: 80%;
+  border: 0.2rem solid #ffbd39;
+  border-radius: 12px;
+  box-shadow: 0 0 50px rgba(0, 255, 136, 0.116);
+  text-align: center;
+  font-weight: 800;
 }
 
-.container_poste {
+.typewriter {
+  padding: auto;
+  font-size: 1.9rem;
+  color: #9cdcfe;
+  font-weight: 700;
   overflow: hidden;
-  border-right: 0.3em solid #1179f7;
-  font-weight: 400;
-  animation: cursorWrite 4s steps(11) infinite,
-    blindCursor 1s step-end infinite alternate;
+  border-right: 0.1em solid #9cdcfe;
+  animation: cursorWrite 6s steps(11) infinite,
+    blindCursor 0.5s step-end infinite alternate;
 }
 
 .right-content {
@@ -64,4 +41,69 @@
 
 .avatar {
   object-fit: cover;
+}
+
+.code-card {
+  background: rgba(13, 17, 23, 0.95);
+  border-radius: 0 0 12px 12px;
+  padding: 15px 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  color: #d1d5db;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.code-header {
+  background: rgba(0, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  color: #00e5ff;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 12px 12px 0 0;
+}
+
+.tools {
+  display: flex;
+  align-items: RIGH;
+  padding: 5px 9px;
+}
+
+.circle {
+  padding: 0 5px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.code-content {
+  color: #9cdcfe;
+  white-space: pre-wrap;
+  padding: 10px;
+}
+
+.highlight {
+  color: #00e5ff;
+  text-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
 }

@@ -5,18 +5,60 @@ import Typewriter from "../../components/Typewriter";
 
 const Home = () => {
   return (
-    <div className="container main-content">
-      <div className="top-content">
-        <div className="left-content">
-          <div className="introduction">Hello,</div>
-          <div className="container_poste">
-            <h1>
-              I am{" "}
-              <span className="poste">
-                <Typewriter />
-              </span>
-            </h1>
+    <div className="home ">
+      <div className="row pt-4  d-flex align-items-center justify-content-center">
+        <div className="col-sm-6 text-light hero-text">
+          <h1 className="display-5 fw-bold">
+            Hello <br /> I'm{" "}
+            <span className="highlight">Rayan Hajanantenaina</span>
+          </h1>
+          <h1 className="poste">
+            <span className="typewriter">
+              <Typewriter />
+            </span>
+          </h1>
+          <br />
+          <div className="d-flex gap-3">
+            <button className="btn btn-outline-info btn-lg">Contact Me</button>
+            <button className="btn btn-outline-light btn-lg">Get Resume</button>
           </div>
+        </div>
+        <div className="col-sm-6">
+          <div className="code-header">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+          </div>
+          <div className="code-card">
+            <pre className="code-content text-start">
+              {`WITH profile AS (
+  SELECT 
+      'HAJANANTENAINA' AS first_name,
+      'Miaritiana Rayan Stive' AS last_name,
+      ARRAY['Big Data Fullstack Engineer', 'Data Engineer/Analyst'] AS title,
+      ARRAY['DBT', 'PostgreSQL', 'Apache Airflow', 'Docker','PowerBI'] AS skills
+)
+SELECT 
+  first_name, 
+  last_name, 
+  title, 
+  skills   
+FROM profile;
+`}
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div className="about row d-flex align-items-center justify-content-center">
+        <div className="col-sm-8">
           <div className="resume-profile">
             A Big Data Engineer with solid expertise in data integration (ETL),
             processing, data quality, data analysis, BI solution design, and the
@@ -30,12 +72,8 @@ const Home = () => {
             <br />• Soft Skills : Adaptability, Team spirit, Communication, Work
             under pressure, Problem-solving.
           </div>
-          <br />
-          <div className="container_cv">
-            <button className="btn btn-primary">Download CV</button>
-          </div>
         </div>
-        <div className="right-content">
+        <div className="col-sm-3">
           <img
             src={picture}
             alt="avatar"

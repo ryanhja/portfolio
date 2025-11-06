@@ -1,10 +1,10 @@
-.nav .bi {
-  cursor: pointer;
-  font-size: 1.6em;
-  color: #ffbd39;
-  padding: 15px 30px;
+.main {
+  padding: 0 10%;
+  min-height: 100vh;
+  color: white;
+  overflow: hidden;
+  position: relative;
 }
-
 .navbar {
   margin: auto;
   display: flex;
@@ -54,8 +54,19 @@
   background-color: #ffbd39;
   transition: transform 0.3s ease;
 }
+.nav .list-menu:hover {
+  cursor: pointer;
+  color: #ffbd39;
+}
 
 .nav .list-menu.active::after,
 .nav .list-menu:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+.nav .bi {
+  cursor: pointer;
+  font-size: 1.6em;
+  color: #ffbd39;
+  padding: 15px 30px;
 }
