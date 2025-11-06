@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import picture from "../../pdp.png";
+import picture from "../../profile.jpg";
 import Typewriter from "../../components/Typewriter";
 
 const Home = () => {
@@ -57,28 +57,36 @@ FROM profile;
           </div>
         </div>
       </div>
-      <div className="about row d-flex align-items-center justify-content-center">
-        <div className="col-sm-8">
-          <div className="resume-profile">
-            A Big Data Engineer with solid expertise in data integration (ETL),
-            processing, data quality, data analysis, BI solution design, and the
-            development of interactive dashboards to support decision-making.
+      <div id="about" className="about d-flex align-items-center">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-8">
+              <h5 className="text-success fw-bold mb-3">WHO I AM?</h5>
+              <p className="about-text">
+                My name is HAJANANTENAINA Miaritiana Rayan Stive, I'm a Big Data
+                Engineer with solid expertise in data integration (ETL),
+                processing, data quality, data analysis, BI solution design, and
+                the development of interactive dashboards to support
+                decision-making.
+                <br />
+                • Technical skills : Python, DBT, Apache Spark, DuckDB,
+                PostgreSQL, SQL Server, SQL Server Intégration Service (SSIS),
+                Talend Open Studio, Apache NiFi, Docker, Kubernetes, Apache
+                Airflow, Flask, Django, OCR, NLP, SpaCy, Metabase, PowerBI,
+                Agile.
+                <br />• Soft Skills : Adaptability, Team spirit, Communication,
+                Work under pressure, Problem-solving.
+              </p>
+            </div>
+            <div className="col-md-4 text-center">
+              <img
+                src={picture}
+                alt="avatar"
+                className="img-fluid rounded about-img"
+              />
+              <div className="about-label">ABOUT ME</div>
+            </div>
           </div>
-          <div>
-            • Technical skills : Python, DBT, Apache Spark, DuckDB, PostgreSQL,
-            SQL Server, SQL Server Intégration Service (SSIS), Talend Open
-            Studio, Apache NiFi, Docker, Kubernetes, Apache Airflow, Flask,
-            Django, OCR, NLP, SpaCy, Metabase, PowerBI, Agile.
-            <br />• Soft Skills : Adaptability, Team spirit, Communication, Work
-            under pressure, Problem-solving.
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <img
-            src={picture}
-            alt="avatar"
-            className="rounded-circle avatar bordered"
-          />
         </div>
       </div>
     </div>

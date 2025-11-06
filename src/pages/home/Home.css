@@ -47,8 +47,8 @@
   background: rgba(13, 17, 23, 0.95);
   border-radius: 0 0 12px 12px;
   padding: 15px 20px;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-top: 0;
   color: #d1d5db;
   font-family: "Fira Code", monospace;
   font-size: 0.95rem;
@@ -59,8 +59,7 @@
   background: rgba(0, 255, 255, 0.05);
   border-bottom: 1px solid rgba(0, 255, 255, 0.2);
   color: #00e5ff;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  border: 2px solid rgba(0, 255, 255, 0.2);
   font-size: 0.9rem;
   padding: 6px 10px;
   border-radius: 12px 12px 0 0;
@@ -106,4 +105,36 @@
 .highlight {
   color: #00e5ff;
   text-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
+}
+
+.about {
+  padding: 80px 0;
+  position: relative;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d1d1d1;
+}
+
+.about-img {
+  max-width: 250px;
+  border-radius: 10px;
+  border: 2px solid #1b1e2d;
+}
+
+.about-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: #14172b;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 8px;
+  border-radius: 8px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  letter-spacing: 1px;
 }
