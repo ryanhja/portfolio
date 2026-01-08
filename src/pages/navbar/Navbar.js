@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./NavBar.css";
-import noire from "./../../noir.png";
-import blanc from "../../blanc.png";
+import logo from "../../logo.png";
 import Home from "../home/Home";
 import Education from "../education/Education";
 import Experience from "../experience/Experience";
@@ -11,33 +10,10 @@ import Contact from "../contact/Contact";
 import { Link } from "react-scroll";
 
 const NavBar = () => {
-  const [theme, setTheme] = useState("dark");
-
-  const handleTheme = () => {
-    const element = document.querySelector(".theme");
-    if (theme === "light") {
-      document.documentElement.setAttribute("data-bs-theme", "dark");
-      element.classList.replace("theme_light", "theme_dark");
-      setTheme("dark");
-    } else {
-      document.documentElement.setAttribute("data-bs-theme", "light");
-      element.classList.replace("theme_dark", "theme_light");
-      setTheme("light");
-    }
-  };
-
   return (
     <div className="main">
-      <div
-        className={`navbar ${
-          theme === "light" ? "navbar-light" : "navbar-dark"
-        }`}
-      >
-        <img
-          src={theme === "light" ? blanc : noire}
-          className="logo"
-          alt="logo"
-        />
+      <div className="navbar navbar-light">
+        <img src={logo} className="logo" alt="logo" />
         <div className="nav">
           <Link
             activeClass="active"
@@ -60,7 +36,7 @@ const NavBar = () => {
           >
             Education
           </Link>
-          <Link
+          <Link 
             to="experience"
             spy
             smooth
@@ -90,7 +66,6 @@ const NavBar = () => {
           >
             Contact Me
           </Link>
-          <i className="bi bi-sun-fill" onClick={handleTheme}></i>
         </div>
       </div>
       <div className="body">
