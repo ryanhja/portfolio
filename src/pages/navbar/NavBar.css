@@ -1,7 +1,9 @@
 .main {
   padding: 0 10%;
   min-height: 100vh;
-  color: white;
+  /* background-image: linear-gradient(to right, #23aacb, #1173ef); */
+  background-image: linear-gradient(to right, #27d2ec77, #23a9cbdf);
+  color: #fff;
   overflow: hidden;
   position: relative;
 }
@@ -35,7 +37,9 @@
   font-weight: 500;
   margin: 20px;
   font-size: 18px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   position: relative;
 }
 

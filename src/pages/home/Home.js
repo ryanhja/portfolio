@@ -61,7 +61,7 @@ FROM profile;
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-8">
-              <h5 className="text-success fw-bold mb-3">WHO I AM?</h5>
+              <h5 className="fw-bold mb-3">WHO I AM?</h5>
               <p className="about-text">
                 My name is HAJANANTENAINA Miaritiana Rayan Stive, I'm a Big Data
                 Engineer with solid expertise in data integration (ETL),

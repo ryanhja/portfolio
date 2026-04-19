@@ -11,21 +11,24 @@
 
 .poste {
   width: 80%;
-  border: 0.2rem solid #ffbd39;
-  border-radius: 12px;
-  box-shadow: 0 0 50px rgba(0, 255, 136, 0.116);
-  text-align: center;
-  font-weight: 800;
+  text-align: left;
+  font-weight: 850;
 }
+
+/* .highlight {
+  color: #6BA9E6;
+  text-shadow: 0 0 15px #23a9cbcd;
+} */
 
 .typewriter {
   padding: auto;
   font-size: 1.9rem;
-  color: #9cdcfe;
+  color: #23a9cbdf;
   font-weight: 700;
   overflow: hidden;
-  border-right: 0.1em solid #9cdcfe;
-  animation: cursorWrite 6s steps(11) infinite,
+  border-right: 0.2em solid #23a9cbdf;
+  animation:
+    cursorWrite 6s steps(11) infinite,
     blindCursor 0.5s step-end infinite alternate;
 }
 
@@ -102,11 +105,6 @@
   padding: 10px;
 }
 
-.highlight {
-  color: #00e5ff;
-  text-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
-}
-
 .about {
   padding: 80px 0;
   position: relative;
@@ -115,7 +113,6 @@
 .about-text {
   font-size: 1rem;
   line-height: 1.7;
-  color: #d1d1d1;
 }
 
 .about-img {
