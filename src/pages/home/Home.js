@@ -8,9 +8,9 @@ const Home = () => {
     <div className="home ">
       <div className="row pt-4  d-flex align-items-center justify-content-center">
         <div className="col-sm-6 text-light hero-text">
-          <h1 className="display-5 fw-bold">
-            Hello <br /> I'm{" "}
-            <span className="highlight">Rayan Hajanantenaina</span>
+          <span className="fw-bold">Hi, my name is </span>
+          <h1 className="display-4 fw-bold">
+            <span className="highlight">Rayan Hajanantenaina.</span>
           </h1>
           <h1 className="poste">
             <span className="typewriter">
