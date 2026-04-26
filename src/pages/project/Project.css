@@ -1,9 +1,61 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.project {
+  padding: 2.5rem 0 1.5rem;
 }
 
-.projet h1 {
-  color: aqua;
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 290px;
+  padding: 1.8rem;
+  background:
+    linear-gradient(180deg, rgba(239, 246, 255, 0.8), rgba(255, 255, 255, 1));
+}
+
+.project__top span {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.project__top h3 {
+  margin: 0.8rem 0 0;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.project__card p {
+  margin: 1rem 0 1.4rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.project__tags span {
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-deep);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .project__grid {
+    grid-template-columns: 1fr;
+  }
 }

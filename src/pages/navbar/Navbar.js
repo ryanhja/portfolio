@@ -1,7 +1,6 @@
 import React from "react";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import "./NavBar.css";
-import logo from "../../logo.png";
+import About from "../about/About";
 import Home from "../home/Home";
 import Education from "../education/Education";
 import Experience from "../experience/Experience";
@@ -11,80 +10,95 @@ import { Link } from "react-scroll";
 
 const NavBar = () => {
   return (
-    <div className="main">
-      <div className="navbar navbar-light">
-        <img src={logo} className="logo" alt="logo" />
-        <div className="nav">
-          <Link
-            activeClass="active"
-            to="main"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="list-menu"
-          >
-            Home
-          </Link>
-          <Link
-            to="education"
-            spy
-            smooth
-            duration={500}
-            offset={-70}
-            className="list-menu"
-          >
-            Education
-          </Link>
-          <Link 
-            to="experience"
-            spy
-            smooth
-            duration={500}
-            offset={-70}
-            className="list-menu"
-          >
-            Experience
-          </Link>
-          <Link
-            to="project"
-            spy
-            smooth
-            duration={500}
-            offset={-70}
-            className="list-menu"
-          >
-            Projects
-          </Link>
-          <Link
-            to="contact"
-            spy
-            smooth
-            duration={500}
-            offset={-70}
-            className="list-menu"
-          >
-            Contact Me
-          </Link>
+    <div className="app-shell">
+      <header className="site-header">
+        <div className="site-header__inner">
+          <div className="brand-mark">Rayan</div>
+          <nav className="site-nav">
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-90}
+              className="site-nav__link"
+            >
+              Home
+            </Link>
+            <Link
+              to="about"
+              spy
+              smooth
+              duration={500}
+              offset={-90}
+              className="site-nav__link"
+            >
+              About
+            </Link>
+            <Link
+              to="education"
+              spy
+              smooth
+              duration={500}
+              offset={-90}
+              className="site-nav__link"
+            >
+              Education
+            </Link>
+            <Link
+              to="experience"
+              spy
+              smooth
+              duration={500}
+              offset={-90}
+              className="site-nav__link"
+            >
+              Experience
+            </Link>
+            <Link
+              to="project"
+              spy
+              smooth
+              duration={500}
+              offset={-90}
+              className="site-nav__link"
+            >
+              Projects
+            </Link>
+            <Link
+              to="contact"
+              spy
+              smooth
+              duration={500}
+              offset={-90}
+              className="site-nav__link site-nav__link--button"
+            >
+              Contact
+            </Link>
+          </nav>
         </div>
-      </div>
-      <div className="body">
-        <section id="home" className="home-page">
+      </header>
+      <main>
+        <section id="home" className="page-section page-section--home">
           <Home />
         </section>
-        <section id="education" className="education-page">
+        <section id="about" className="page-section page-section--home">
+          <About />
+        </section>
+        <section id="education" className="page-section page-section--light">
           <Education />
         </section>
-        <section id="experience" className="experience-page">
+        <section id="experience" className="page-section page-section--light">
           <Experience />
         </section>
-        <section id="project" className="projet-page">
+        <section id="project" className="page-section page-section--light">
           <Project />
         </section>
-        <section id="contact" className="contact-page">
+        <section id="contact" className="page-section page-section--light">
           <Contact />
         </section>
-      </div>
+      </main>
     </div>
   );
 };

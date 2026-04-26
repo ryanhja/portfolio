@@ -1,92 +1,74 @@
 import React from "react";
 import "./Home.css";
-import picture from "../../avatar.jpg";
+import picture from "../../assets/hero.png";
+import resumeFile from "../../assets/CV_Rayan_HAJANANTENAINA.pdf";
 import Typewriter from "../../components/Typewriter";
+import { Link } from "react-scroll";
+
+const tools = [
+  "DBT",
+  "Python",
+  "Pandas",
+  "PostgreSQL",
+  "React",
+  "Git",
+  "Github",
+];
 
 const Home = () => {
   return (
-    <div className="home ">
-      <div className="row pt-4  d-flex align-items-center justify-content-center">
-        <div className="col-sm-6 text-light hero-text">
-          <span className="fw-bold">Hi, my name is </span>
-          <h1 className="display-4 fw-bold">
-            <span className="highlight">Rayan Hajanantenaina.</span>
-          </h1>
-          <h1 className="poste">
-            <span className="typewriter">
-              <Typewriter />
+    <div className="home">
+      <div className="section-inner home__inner">
+        <div className="home__hero">
+          <div className="home__copy">
+            <p className="home__eyebrow">Hello</p>
+            <p className="home__name">I&apos;m Rayan</p>
+            <h1 className="home__role">
+              <span className="home__type">
+                <Typewriter />
+              </span>
+            </h1>
+            <p className="home__description">
+              Je conçois des pipelines fiables, des dashboards utiles et des
+              interfaces web propres qui aident les equipes a mieux decider.
+            </p>
+            <div className="home__actions">
+              <Link
+                to="contact"
+                spy
+                smooth
+                duration={500}
+                offset={-90}
+                className="home__button home__button--ghost"
+              >
+                Contact Me
+              </Link>
+              <a
+                href={resumeFile}
+                download="CV_Rayan_HAJANANTENAINA.pdf"
+                className="home__button home__button--primary"
+              >
+                Get Resume
+              </a>
+            </div>
+          </div>
+          <div className="home__visual">
+            <span className="home__shape home__shape--left" aria-hidden="true">
+              {"<"}
             </span>
-          </h1>
-          <br />
-          <div className="d-flex gap-3">
-            <button className="btn btn-outline-info btn-lg">Contact Me</button>
-            <button className="btn btn-outline-light btn-lg">Get Resume</button>
+            <div className="home__ring" aria-hidden="true"></div>
+            <div className="home__portrait-wrap">
+              <img src={picture} alt="avatar" className="home__avatar" />
+            </div>
+            <span className="home__shape home__shape--right" aria-hidden="true">
+              {">"}
+            </span>
           </div>
         </div>
-        <div className="col-sm-6">
-          <div className="code-header">
-            <div class="tools">
-              <div class="circle">
-                <span class="red box"></span>
-              </div>
-              <div class="circle">
-                <span class="yellow box"></span>
-              </div>
-              <div class="circle">
-                <span class="green box"></span>
-              </div>
-            </div>
-          </div>
-          <div className="code-card">
-            <pre className="code-content text-start">
-              {`WITH profile AS (
-  SELECT 
-      'HAJANANTENAINA' AS first_name,
-      'Miaritiana Rayan Stive' AS last_name,
-      ARRAY['Big Data Fullstack Engineer', 'Data Engineer/Analyst'] AS title,
-      ARRAY['DBT', 'PostgreSQL', 'Apache Airflow', 'Docker','PowerBI'] AS skills
-)
-SELECT 
-  first_name, 
-  last_name, 
-  title, 
-  skills   
-FROM profile;
-`}
-            </pre>
-          </div>
-        </div>
-      </div>
-      <div id="about" className="about d-flex align-items-center">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-8">
-              <h5 className="fw-bold mb-3">WHO I AM?</h5>
-              <p className="about-text">
-                My name is HAJANANTENAINA Miaritiana Rayan Stive, I'm a Big Data
-                Engineer with solid expertise in data integration (ETL),
-                processing, data quality, data analysis, BI solution design, and
-                the development of interactive dashboards to support
-                decision-making.
-                <br />
-                • Technical skills : Python, DBT, Apache Spark, DuckDB,
-                PostgreSQL, SQL Server, SQL Server Intégration Service (SSIS),
-                Talend Open Studio, Apache NiFi, Docker, Kubernetes, Apache
-                Airflow, Flask, Django, OCR, NLP, SpaCy, Metabase, PowerBI,
-                Agile.
-                <br />• Soft Skills : Adaptability, Team spirit, Communication,
-                Work under pressure, Problem-solving.
-              </p>
-            </div>
-            <div className="col-md-4 text-center">
-              <img
-                src={picture}
-                alt="avatar"
-                className="img-fluid rounded about-img"
-              />
-              <div className="about-label">ABOUT ME</div>
-            </div>
-          </div>
+        <div className="home__stack">
+          {tools.map((tool) => (
+            <span key={tool}>{tool}</span>
+          ))}
         </div>
       </div>
     </div>

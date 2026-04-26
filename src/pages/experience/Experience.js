@@ -1,110 +1,66 @@
 import React from "react";
+import "./Experience.css";
+
+const experiences = [
+  {
+    period: "Nov 2024 - Present",
+    role: "Engineer Big Data & Fullstack",
+    company: "Yas, Antananarivo",
+    summary:
+      "Mise en place de cadres de gouvernance et de qualite de donnees, migration d'environnements, optimisation de pipelines ETL et modernisation des dashboards BI.",
+    stack: "Python, DBT, DuckDB, PostgreSQL, Airflow, Docker, Power BI"
+  },
+  {
+    period: "Aug 2023 - Oct 2023",
+    role: "Intern - Odoo Developer",
+    company: "Ingenosya, Antananarivo",
+    summary:
+      "Customisation de modules Odoo et support sur plusieurs projets clients avec une forte orientation metier.",
+    stack: "Python, Odoo, PostgreSQL"
+  },
+  {
+    period: "Sep 2022 - Apr 2023",
+    role: "Intern - Fullstack Web Developer & AI",
+    company: "InnovAnalyse, Paris",
+    summary:
+      "Conception d'une plateforme web, extraction automatisee d'informations PDF via OCR/NLP et deploiement CI/CD sur serveur Ubuntu.",
+    stack: "Flask, React, PostgreSQL, OCR, spaCy"
+  },
+  {
+    period: "May 2021 - Oct 2021",
+    role: "Intern - Fullstack Web Developer",
+    company: "Kairos, Fianarantsoa",
+    summary:
+      "Developpement d'une application de gestion pour restaurant avec deploiement distant et workflow complet de validation.",
+    stack: "Django, Angular, PostgreSQL"
+  }
+];
 
 const Experience = () => {
   return (
-    <div className="=experience">
-      <h1>EXPERIENCES</h1>
-      <div className="experience-list">
-        <div className="mt-4 p-5 bg-secondary text-white rounded">
-          <p>November 2024 – Present</p>
-          <p>Engineer BigData & Fullstack</p>
-          <p>Yas – Antananarivo, Madagascar</p>
-          <p>
-            • Initiated the implementation of a data governance and data quality
-            framework for the Data Warehouse platform of Yas Madagascar and Yas
-            Comores. Defined data management rules, automated data quality
-            checks, built dashboards to monitor data health, and implemented an
-            alert system for anomalies.
-            <br />
-            • Migrated jobs and data to the new server in order to identify and
-            remove obsolete or redundant tables, and to adopt modern data
-            processing tools and architectures to improve server performance.
-            <br />
-            • Migrated Business Objects dashboards to Power BI dashboards to
-            improve user experience and eliminate email-based data sharing.
-            <br />
-            • Improved data pipeline performance by leveraging modern tools such
-            as dbt and DuckDB for data transformation and optimization, and
-            Apache Airflow for job orchestration and real-time notifications via
-            email and Microsoft Teams.
-            <br />• Shared knowledge with the team on modern data processing
-            architecture, including the use of DBT for data transformation and
-            data quality testing, performance optimization of ETL pipelines with
-            DuckDB, and job orchestration using Apache Airflow.
-            <br />
-            Skills : Python, DBT, Apache Spark, DuckDB, PostgreSQL, SQL Server,
-            SQL Server Intégration Service (SSIS), Talend Open Studio, Apache
-            NiFi, Docker, Kubernetes, Apache Airflow, Metabase, PowerBI
-          </p>
-        </div>
-        <div className="mt-4 p-5 bg-secondary text-white rounded">
-          <p>August 2023 - October 2023</p>
-          <p>Intern – Odoo Developer</p>
-          <p>Ingenosya – Antananarivo, Madagascar</p>
-          <p>
-            • Contributed to the enhancement and customization of the company’s
-            internal Odoo platform.
-            <br />• Participated in multiple client projects, providing
-            technical support and implementing tailored business solutions.
-            <br />
-            Skills : Python, Odoo 8, Odoo 12, Odoo 16, PostgreSQL
-          </p>
-        </div>
-        <div className="mt-4 p-5 bg-secondary text-white rounded">
-          <p>September 2022 - April 2023</p>
-          <p>Intern – Fullstack Web Developer & Artificial Intelligence</p>
-          <p>InnovAnalyse – Paris, France</p>
-          <p>
-            • Designed and developed a web platform for the automatic generation
-            of financial calculations related to the Research Tax Credit (CIR).
-            <br />• Built an automated system to extract information from PDF
-            files by combining OCR and NLP
-            <br />• Trained and deployed a custom NLP model to identify and
-            extract domain-specific fields from textual data.
-            <br />• Deployed the application on an Ubuntu server using a GitLab
-            CI/CD pipeline.
-            <br />
-            Skills : Python, Flask,Tesseract OCR, spaCy, React, Bootstrap,
-            PostgreSQL
-          </p>
-        </div>
-
-        <div className="mt-4 p-5 bg-secondary text-white rounded">
-          <p>May 2021 - October 2021</p>
-          <p>Intern – Fullstack Web Developer,</p>
-          <p>Kairos – Fianarantsoa, Madagascar</p>
-          <p>
-            • Designed and developed a web application to manage restaurant's
-            operations, including customer management, orders, inventory, and
-            delivery.
-            <br />• Deployed the application on a remote server for testing and
-            project validation.
-            <br />
-            Skills : Python, Django, Angular, Bootstrap, PostgreSQL
-          </p>
-        </div>
-        <div className="mt-4 p-5 bg-secondary text-white rounded">
-          <p>December 2019 - March 2020</p>
-          <p>Intern – Web Developer</p>
-          <p>CENI – Antsirable, Madagascar </p>
-          <p>
-            • Designed and implemented a web application to manage and track
-            materials accounting processes.
-            <br />
-            Skills : PHP, CodeIgniter, Bootstrap, MySQL
-          </p>
-        </div>
-        <div className="mt-4 p-5 bg-secondary text-white rounded">
-          <p>October 2018 - February 2019</p>
-          <p>Intern – Software Developer</p>
-          <p>Ministry of Finance and Budget – Fianarantsoa, Madagascar</p>
-          <p>
-            • Designed and implemented a desktop application to automate
-            validation of precarious services.
-            <br />
-            Skills : Java, MySQL
-          </p>
-        </div>
+    <div className="section-inner experience">
+      <div className="section-heading">
+        <span>Experience</span>
+        <h2>Des experiences centrees sur la performance et la clarte.</h2>
+        <p>
+          Une trajectoire qui melange architecture data, automatisation,
+          intelligence artificielle et applications web orientees usage.
+        </p>
+      </div>
+      <div className="experience__timeline">
+        {experiences.map((item) => (
+          <article key={`${item.period}-${item.role}`} className="experience__item">
+            <div className="experience__meta">
+              <span>{item.period}</span>
+            </div>
+            <div className="experience__card surface-card">
+              <h3>{item.role}</h3>
+              <strong>{item.company}</strong>
+              <p>{item.summary}</p>
+              <small>{item.stack}</small>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   );
