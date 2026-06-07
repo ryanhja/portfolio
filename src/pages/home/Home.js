@@ -22,15 +22,17 @@ const Home = () => {
         <div className="home__hero">
           <div className="home__copy">
             <p className="home__eyebrow">Hello</p>
-            <p className="home__name">I&apos;m Rayan</p>
+            <p className="home__name">I&apos;m Rayan HAJANANTENAINA</p>
             <h1 className="home__role">
               <span className="home__type">
                 <Typewriter />
               </span>
             </h1>
             <p className="home__description">
-              Je conçois des pipelines fiables, des dashboards utiles et des
-              interfaces web propres qui aident les equipes a mieux decider.
+              Fullstack Big Data Engineer with 3 years of experience in data
+              integration, governance, and analytics. Strong expertise in
+              Python, dbt, Apache Airflow, and Modern Data Stack architecture,
+              transforming complex data pipelines into actionable insights.
             </p>
             <div className="home__actions">
               <Link
